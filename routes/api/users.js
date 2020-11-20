@@ -7,7 +7,7 @@ const gravatar =require('gravatar');
 const keys = require('../../config/keys');
 const passport  = require('passport');
 
-const User = require('../../models/User');
+const User = require('../../model/User');
 
 //$router GET api/users/test
 //@desc 返回的请求的json数据
@@ -22,7 +22,7 @@ const User = require('../../models/User');
 router.post('/register',(req,res) => {
     //console.log(req.body);
     //查询数据库中是否拥有邮箱
-    User.findOne({email:req.body.email})
+    Useinstall code commandr.findOne({email:req.body.email})
     .then((user)=>{
         if(user){
             return res.status(400).json('邮箱已被注册');
